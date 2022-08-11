@@ -20,7 +20,7 @@ RUN apt-get update -qq && \
     imagemagick \
     libmagickwand-dev
 
-RUN pecl install imagick && docker-php-ext-enable imagick
+RUN pecl install imagick xdebug && docker-php-ext-enable imagick xdebug
 
 RUN docker-php-ext-install opcache pdo_mysql gd intl zip
 # Apache

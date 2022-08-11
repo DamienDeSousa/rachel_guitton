@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>about</key>
+
+    <meta>
+        <title lang="en">About</title>
+        <title lang="fr">A propos</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="fr">Titre</title>
+            </meta>
+        </property>
+        <property name="profile_image" type="single_media_selection" mandatory="true">
+            <meta>
+                <title lang="en">Image profile</title>
+                <title lang="fr">Image de profil</title>
+            </meta>
+        </property>
+        <property name="description" type="text_editor" mandatory="true">
+            <meta>
+                <title lang="en">Description</title>
+                <title lang="fr">Description</title>
+            </meta>
+        </property>
+    </properties>
+
+    <areas>
+        <area key="snippet_about">
+            <meta>
+                <title lang="en">About</title>
+                <title lang="fr">A propos</title>
+            </meta>
+        </area>
+    </areas>
+</template>

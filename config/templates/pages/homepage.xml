@@ -7,18 +7,17 @@
 
     <view>pages/homepage</view>
     <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
-    <cacheLifetime>86400</cacheLifetime>
 
     <meta>
         <title lang="en">Homepage</title>
-        <title lang="fr_fr">Startseite</title>
+        <title lang="fr">Page d'accueil</title>
     </meta>
 
     <properties>
         <property name="title" type="text_line" mandatory="true">
             <meta>
                 <title lang="en">Title</title>
-                <title lang="de">Titel</title>
+                <title lang="fr">Titre</title>
             </meta>
             <params>
                 <param name="headline" value="true"/>
@@ -30,17 +29,10 @@
         <property name="url" type="resource_locator" mandatory="true">
             <meta>
                 <title lang="en">Resourcelocator</title>
-                <title lang="de">Adresse</title>
+                <title lang="fr">Adresse</title>
             </meta>
 
             <tag name="sulu.rlp"/>
-        </property>
-
-        <property name="article" type="text_editor">
-            <meta>
-                <title lang="en">Article</title>
-                <title lang="de">Artikel</title>
-            </meta>
         </property>
     </properties>
 </template>

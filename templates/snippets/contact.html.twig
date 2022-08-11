@@ -1,0 +1,77 @@
+<div class="row headband pt-md-6 pb-md-6" id="contact">
+    <div class="col-md-4 offset-md-4">
+        <div class="row mb-md-5">
+            <div class="col">
+                <p class="contact-advice text-center">{{ snippet.content.advice }}</p>
+            </div>
+        </div>
+        {% set form = get_contact_form(app.request) %}
+        {{ form_start(form) }}
+            <div class="row">
+                <div class="col">
+                    {{
+                        form_widget(
+                            form.name,
+                            {
+                                'attr': {
+                                    'placeholder': snippet.content.name,
+                                    'class': 'form-control mb-md-3',
+                                    'autocomplete': 'off'
+                                }
+                            }
+                        )
+                    }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {{
+                        form_widget(
+                            form.email,
+                            {
+                                    'attr': {
+                                    'placeholder': snippet.content.email,
+                                    'class': 'form-control mb-md-3',
+                                    'autocomplete': 'off'
+                                }
+                            }
+                        )
+                    }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {{
+                        form_widget(
+                            form.message,
+                            {
+                                    'attr': {
+                                    'placeholder': snippet.content.message,
+                                    'class': 'form-control mb-md-5'
+                                }
+                            }
+                        )
+                    }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-end">
+                    <button type="submit">{{ snippet.content.submit }}</button>
+                </div>
+            </div>
+            <div data-controller="contact">
+                {{
+                    form_widget(
+                        form._token,
+                        {
+                            'attr': {
+                                'data-form-name': form.vars.name,
+                                'data-contact-target': 'csrf'
+                            }
+                        }
+                    )
+                }}
+            </div>
+        {{ form_end(form) }}
+    </div>
+</div>

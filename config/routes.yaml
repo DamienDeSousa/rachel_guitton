@@ -1,1 +1,6 @@
 # Define website routes in `routes_website.yaml` and admin routes in the `routes_admin.yaml`
+app_form:
+    path: /_form/token
+    defaults:
+        _controller: App\Controller\Website\FormTokenController::tokenAction
+        _requestAnalyzer: false

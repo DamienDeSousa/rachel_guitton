@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>menu</key>
+
+    <meta>
+        <title lang="en">Menu</title>
+        <title lang="fr">Menu</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="fr">Titre</title>
+            </meta>
+        </property>
+
+        <block name="links" minOccurs="1">
+            <meta>
+                <title lang="en">Links</title>
+                <title lang="fr">Liens</title>
+            </meta>
+            <types>
+                <type name="link">
+                    <properties>
+                        <property name="link_name" type="text_line" mandatory="true">
+                            <meta>
+                                <title lang="en">Link name</title>
+                                <title lang="fr">Nom du lien</title>
+                            </meta>
+                        </property>
+                        <property name="anchor" type="text_line" mandatory="true">
+                            <meta>
+                                <title lang="en">Anchor link</title>
+                                <title lang="fr">Ancre</title>
+                            </meta>
+                        </property>
+                    </properties>
+                </type>
+            </types>
+        </block>
+    </properties>
+
+    <areas>
+        <area key="snippet_menu">
+            <meta>
+                <title lang="en">Menu</title>
+                <title lang="fr">Menu</title>
+            </meta>
+        </area>
+    </areas>
+</template>

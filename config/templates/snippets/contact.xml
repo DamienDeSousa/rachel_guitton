@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>contact</key>
+
+    <meta>
+        <title lang="en">Contact</title>
+        <title lang="fr">Contact</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="fr">Titre</title>
+            </meta>
+        </property>
+        <property name="name" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Name placeholder</title>
+                <title lang="fr">Espace réservé du nom</title>
+            </meta>
+        </property>
+        <property name="email" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Email placeholder</title>
+                <title lang="fr">Espace réservé de l'email</title>
+            </meta>
+        </property>
+        <property name="message" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Message placeholder</title>
+                <title lang="fr">Espace réservé du message</title>
+            </meta>
+        </property>
+        <property name="submit" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Send message button text</title>
+                <title lang="fr">Texte du boutton d'envoi du message</title>
+            </meta>
+        </property>
+        <property name="advice" type="text_area" mandatory="true">
+            <meta>
+                <title lang="en">Why contact us</title>
+                <title lang="fr">Pourquoi nous contacter</title>
+            </meta>
+        </property>
+    </properties>
+
+    <areas>
+        <area key="snippet_contact">
+            <meta>
+                <title lang="en">Contact</title>
+                <title lang="fr">Contact</title>
+            </meta>
+        </area>
+    </areas>
+</template>

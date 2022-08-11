@@ -1,0 +1,14 @@
+{% set links = snippet.content.links %}
+<div class="row pt-md-6 pb-md-6 mb-4" style="background-color: #B7BCBF">
+    <div class="col">
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <ul class="navbar-nav mx-auto">
+                    {% for link in links %}
+                        <li class="nav-item"><a class="nav-link" href="#{{ link.anchor }}"><h4>{{ link.link_name|capitalize }}</h4></a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>

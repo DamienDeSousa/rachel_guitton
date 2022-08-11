@@ -41,3 +41,18 @@ build-website-assets:
 build-assets: ## build all assets
 	$(MAKE) build-admin-assets
 	$(MAKE) build-website-assets
+
+clear-cache: ## clear all cache
+	$(MAKE) clear-admin-cache
+	$(MAKE) clear-website-cache
+
+clear-admin-cache: ## clear admin cache
+	$(DOCKER_SERVER) php bin/adminconsole cache:clear --no-warmup
+	$(DOCKER_SERVER) php bin/adminconsole cache:clear --no-warmup --env=dev
+
+clear-website-cache: ## clear website cache
+	$(DOCKER_SERVER) php bin/websiteconsole cache:clear --no-warmup
+	$(DOCKER_SERVER) php bin/websiteconsole cache:clear --no-warmup --env=dev
+
+clear-preview-cache: ## clear preview cache
+	sudo rm -rf var/cache/preview/*
