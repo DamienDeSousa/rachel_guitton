@@ -55,6 +55,7 @@
         "symfony/css-selector": "^5.4",
         "symfony/debug-bundle": "^5.4",
         "symfony/error-handler": "^5.4",
+        "symfony/panther": "^2.0",
         "symfony/phpunit-bridge": "^5.4",
         "symfony/thanks": "^1.2",
         "symfony/web-profiler-bundle": "^5.4"

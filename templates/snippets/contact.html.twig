@@ -1,10 +1,25 @@
-<div class="row headband pt-md-6 pb-md-6" id="contact">
+<div class="row headband vh-100 pt-6" id="contact">
     <div class="col-md-4 offset-md-4">
+        {% for message in app.flashes('email_send') %}
+            {% if message == true %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    AAAAAAAAAAAAAAA
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endif %}
+        {% endfor %}
         <div class="row mb-md-5">
             <div class="col">
                 <p class="contact-advice text-center">{{ snippet.content.advice }}</p>
             </div>
         </div>
+        {% if app.flashes('error')|default %}
+            {% for message in app.flashes('error') %}
+                <div class="alert alert-danger">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
         {% set form = get_contact_form(app.request) %}
         {{ form_start(form) }}
             <div class="row">
@@ -56,7 +71,7 @@
             </div>
             <div class="row">
                 <div class="text-end">
-                    <button type="submit">{{ snippet.content.submit }}</button>
+                    <button type="submit" id="send_email">{{ snippet.content.submit }}</button>
                 </div>
             </div>
             <div data-controller="contact">

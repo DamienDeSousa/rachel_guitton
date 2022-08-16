@@ -7,10 +7,6 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 
 class LazyCsrfTokenManager implements CsrfTokenManagerInterface
 {
-
-    /**
-     * @param CsrfTokenManagerInterface $csrfTokenManager
-     */
     public function __construct(private CsrfTokenManagerInterface $csrfTokenManager)
     {
     }

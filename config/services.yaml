@@ -34,3 +34,18 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    #####     CONTROLLERS     #####
+    App\Controller\Website\ContactController:
+        arguments:
+            $formProvider: '@App\Form\Provider\ContactFormProvider'
+
+    App\Controller\Website\FormTokenController:
+        public: true
+    ###############################
+
+    #####     TWIG     #####
+    App\Twig\Form\ContactFormExtension:
+        arguments:
+            $formProvider: '@App\Form\Provider\LazyContactFormProvider'
+

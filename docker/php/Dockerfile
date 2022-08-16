@@ -18,14 +18,34 @@ RUN apt-get update -qq && \
     zip \
     libzip-dev \
     imagemagick \
-    libmagickwand-dev
+    libmagickwand-dev \
+    chromium \
+    wget \
+    libgconf-2-4
 
 RUN pecl install imagick xdebug && docker-php-ext-enable imagick xdebug
 
 RUN docker-php-ext-install opcache pdo_mysql gd intl zip
+
 # Apache
 COPY my-httpd.conf /etc/apache2/sites-available/000-default.conf
 
 RUN a2enmod rewrite
+
+# install chromedriver
+ENV CHROMEDRIVER_DIR /chromedriver
+RUN mkdir $CHROMEDRIVER_DIR
+ENV CHROMEDRIVER_VERSION 104.0.5112.79
+
+# Download and install Chromedriver
+RUN wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
+RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
+
+# Put Chromedriver into the PATH
+ENV PATH $CHROMEDRIVER_DIR:$PATH
+
+# panther for E2E tests
+ENV PANTHER_NO_SANDBOX 1
+ENV PANTHER_CHROME_ARGUMENTS='--disable-dev-shm-usage'
 
 CMD ["apache2-foreground"]

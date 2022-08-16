@@ -1,4 +1,3 @@
-# Annotation are defined per context in "annotations_admin.yaml" and "annotations_website.yaml"
-controller:
-    resource: ../../src/Controller/Api/
+controllers:
+    resource: ../../src/Controller/
     type: annotation

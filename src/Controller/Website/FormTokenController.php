@@ -19,15 +19,6 @@ class FormTokenController
 
         $content = $csrfToken;
 
-        if ($request->get('html')) {
-            $content = \sprintf(
-                '<input type="hidden" id="%s__token" name="%s[_token]" value="%s" />',
-                $formName,
-                $formName,
-                $csrfToken
-            );
-        }
-
         $response = new Response($content);
 
         /* Deactivate Cache for this token action */

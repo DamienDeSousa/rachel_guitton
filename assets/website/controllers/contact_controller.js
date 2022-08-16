@@ -5,7 +5,7 @@ export default class extends Controller {
 
     async csrfTargetConnected() {
         const formName = this.csrfTarget.dataset.formName;
-        const response = await fetch('/_form/token?form=' + formName + '&html=0', {
+        const response = await fetch('/_form/token?form=' + formName, {
             credentials: 'same-origin', // required for old safari versions
             headers: {
                 'X-Requested-With': 'XMLHttpRequest',
