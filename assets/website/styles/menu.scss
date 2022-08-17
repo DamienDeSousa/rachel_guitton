@@ -1,9 +1,7 @@
-@media (min-width: 768px) {
-    .pt-md-7 {
-        padding-top: 15rem !important;
-    }
+.menu {
+    background-color: #B7BCBF;
 
-    .pb-md-7 {
-        padding-bottom: 15rem !important;
+    .nav__item--active a {
+        color: black;
     }
 }

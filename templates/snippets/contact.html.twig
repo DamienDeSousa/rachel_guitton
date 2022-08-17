@@ -1,4 +1,4 @@
-<div class="row headband vh-100 pt-6" id="contact">
+<div class="row headband vh-100 pt-7 contact" id="contact">
     <div class="col-md-4 offset-md-4">
         {% for message in app.flashes('email_send') %}
             {% if message == true %}
@@ -10,13 +10,14 @@
         {% endfor %}
         <div class="row mb-md-5">
             <div class="col">
-                <p class="contact-advice text-center">{{ snippet.content.advice }}</p>
+                <p class="contact__text text-center">{{ snippet.content.advice }}</p>
             </div>
         </div>
         {% if app.flashes('error')|default %}
             {% for message in app.flashes('error') %}
-                <div class="alert alert-danger">
+                <div class="alert alert-danger alert-dismissible fade show">
                     {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             {% endfor %}
         {% endif %}
@@ -30,7 +31,7 @@
                             {
                                 'attr': {
                                     'placeholder': snippet.content.name,
-                                    'class': 'form-control mb-md-3',
+                                    'class': 'form-control mb-md-3 contact__input',
                                     'autocomplete': 'off'
                                 }
                             }
@@ -46,7 +47,7 @@
                             {
                                     'attr': {
                                     'placeholder': snippet.content.email,
-                                    'class': 'form-control mb-md-3',
+                                    'class': 'form-control mb-md-3 contact__input',
                                     'autocomplete': 'off'
                                 }
                             }
@@ -62,7 +63,7 @@
                             {
                                     'attr': {
                                     'placeholder': snippet.content.message,
-                                    'class': 'form-control mb-md-5'
+                                    'class': 'form-control mb-md-5 contact__input'
                                 }
                             }
                         )
@@ -71,7 +72,7 @@
             </div>
             <div class="row">
                 <div class="text-end">
-                    <button type="submit" id="send_email">{{ snippet.content.submit }}</button>
+                    <button type="submit" id="send_email" class="contact__input">{{ snippet.content.submit }}</button>
                 </div>
             </div>
             <div data-controller="contact">

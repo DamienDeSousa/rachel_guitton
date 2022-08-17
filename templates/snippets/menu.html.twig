@@ -1,11 +1,13 @@
 {% set links = snippet.content.links %}
-<div class="row pt-md-7 pb-md-7 pb-4 pt-4 mb-5" style="background-color: #B7BCBF">
+<div class="row pt-md-9 pb-md-9 pb-4 pt-4 mb-5 menu">
     <div class="col">
         <nav class="navbar navbar-expand-md">
             <div class="container">
                 <ul class="navbar-nav mx-md-auto">
                     {% for link in links %}
-                        <li class="nav-item"><a class="nav-link" href="#{{ link.anchor }}"><h4>{{ link.link_name|capitalize }}</h4></a></li>
+                        <li class="nav-item {{ loop.first ? 'nav__item--active' : '' }}">
+                            <a class="nav-link" href="#{{ link.anchor }}"><h4>{{ link.link_name|capitalize }}</h4></a>
+                        </li>
                     {% endfor %}
                 </ul>
             </div>

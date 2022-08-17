@@ -1,27 +1,29 @@
-input[type=text],input[type=email],textarea,button[type=submit] {
-    background-color: transparent !important;
-    color: #B6BCBF !important;
-    border: none !important;
-    outline: none !important;
-}
+.contact {
+    $color: #B6BCBF !important;
+    $border: none !important;
+    $backgroundColor: transparent !important;
+    $outline: none !important;
 
-input[type=text]:focus,input[type=text]:focus,input[type=text]:active,input[type=text]:hover,textarea:focus,textarea:active,textarea:hover {
-    outline: none !important;
-    box-shadow: none !important;
-    background-color: transparent !important;
-    color: #B6BCBF !important;
-}
+    &__text {
+        color: $color;
+    }
 
-input[type=email]:focus,input[type=email]:focus,input[type=email]:active,input[type=email]:hover {
-    outline: none !important;
-    box-shadow: none;
-    background-color: transparent;
-}
+    &__submit,&__input {
+        color: $color;
+        border: $border;
+        background-color: $backgroundColor;
+        outline: $outline;
+    }
 
-input[type=text]::placeholder,input[type=email]::placeholder,textarea::placeholder {
-    color: #B6BCBF !important;
-}
+    &__input {
+        &::placeholder {
+            color: $color;
+        }
 
-.contact-advice {
-    color: #B6BCBF !important;
+        &:focus,&:active,&:hover {
+            background-color: $backgroundColor;
+            outline: $outline;
+            box-shadow: none !important;
+        }
+    }
 }
