@@ -1,7 +1,15 @@
 .menu {
-    background-color: #B7BCBF;
+    background-color: #C6C4C5;
 
     .nav__item--active a {
-        color: black;
+        color: #302E2F;
+    }
+
+    .nav__item a {
+        color: white;
+    }
+
+    &__light-band {
+        background-color: #949494;
     }
 }

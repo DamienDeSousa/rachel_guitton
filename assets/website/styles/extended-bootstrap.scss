@@ -1,8 +1,4 @@
 @media (min-width: 768px) {
-    .mt-md-8 {
-        margin-top: 12rem !important;
-    }
-
     .pt-md-9 {
         padding-top: 15rem !important;
     }
@@ -13,9 +9,21 @@
 }
 
 .p-6 {
-    padding: 5rem !important;
+    padding: 5rem;
+}
+
+.mb-6 {
+    margin-bottom: 5rem;
+}
+
+.mb-7 {
+    margin-bottom: 10rem;
 }
 
 .pt-7 {
-    padding-top: 10rem !important;
+    padding-top: 10rem;
+}
+
+.pt-9 {
+    padding-top: 15rem;
 }

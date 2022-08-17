@@ -5,9 +5,9 @@
 {% endblock %}
 
 {% block header %}
-    <div class="row">
+    <div class="row over-header mb-2">
         <div class="col mt-2">
-            <h4 class="text-center">{{ content.title }}</h4>
+            <h4 class="text-center over-header__title">{{ content.title }}</h4>
         </div>
     </div>
     {% include 'snippets/menu.html.twig' with {'snippet': sulu_snippet_load_by_area('snippet_menu')} %}

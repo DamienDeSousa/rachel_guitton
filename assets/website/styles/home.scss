@@ -1,11 +1,18 @@
+@charset "utf-8";
 @import "./extended-bootstrap";
 @import "./contact";
 @import "./menu";
 
 .headband {
-    background-color: #1B3137;
+    background-color: #1D362B;
 }
 
 html {
     scroll-behavior: auto !important;
+}
+
+.over-header {
+    &__title {
+        color: #E99E82;
+    }
 }

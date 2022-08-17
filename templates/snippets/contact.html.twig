@@ -1,4 +1,4 @@
-<div class="row headband vh-100 pt-7 contact" id="contact">
+<div class="row vh-100 pt-9 contact" id="contact">
     <div class="col-md-4 offset-md-4">
         {% for message in app.flashes('email_send') %}
             {% if message == true %}
@@ -31,7 +31,7 @@
                             {
                                 'attr': {
                                     'placeholder': snippet.content.name,
-                                    'class': 'form-control mb-md-3 contact__input',
+                                    'class': 'mb-4 contact__input',
                                     'autocomplete': 'off'
                                 }
                             }
@@ -47,7 +47,7 @@
                             {
                                     'attr': {
                                     'placeholder': snippet.content.email,
-                                    'class': 'form-control mb-md-3 contact__input',
+                                    'class': 'mb-4 contact__input',
                                     'autocomplete': 'off'
                                 }
                             }
@@ -63,7 +63,7 @@
                             {
                                     'attr': {
                                     'placeholder': snippet.content.message,
-                                    'class': 'form-control mb-md-5 contact__input'
+                                    'class': 'mb-6 contact__input'
                                 }
                             }
                         )
