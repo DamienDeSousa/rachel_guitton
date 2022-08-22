@@ -1,0 +1,21 @@
+{% set image_id = 'image-' ~ increment %}
+<div class="col-md text-center mb-5 gallery__item">
+    <img src="{{ image.grid.url }}" alt="{{ image.text }}" class="img-fluid" data-bs-toggle="modal" data-bs-target="{{ '#' ~ image_id }}">
+
+    <div class="modal fade" id="{{ image_id }}" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{ image.text|capitalize }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ image.large.URL }}" alt="{{ image.text }}" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -24,11 +24,7 @@
 
     {% include 'snippets/contact.html.twig' with {'snippet': sulu_snippet_load_by_area('snippet_contact')} %}
 
-    <div class="row" id="portfolio">
-        <div class="col border border-danger">
-            <h4>Gallery</h4>
-        </div>
-    </div>
+    {% include 'snippets/gallery.html.twig' with {'snippet': sulu_snippet_load_by_area('snippet_gallery')} %}
 {% endblock %}
 
 {% block footer %}

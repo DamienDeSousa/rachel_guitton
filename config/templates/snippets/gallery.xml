@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>gallery</key>
+
+    <meta>
+        <title lang="en">Gallery</title>
+        <title lang="fr">Galerie</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="fr">Titre</title>
+            </meta>
+        </property>
+
+        <property name="description" type="text_area" mandatory="true">
+            <meta>
+                <title lang="en">Description</title>
+                <title lang="fr">Description</title>
+            </meta>
+        </property>
+
+        <block name="images" minOccurs="1">
+            <meta>
+                <title lang="en">Images</title>
+                <title lang="fr">Images</title>
+            </meta>
+            <types>
+                <type name="image">
+                    <properties>
+                        <property name="grid" type="single_media_selection" mandatory="true">
+                            <meta>
+                                <title lang="en">Grid Image</title>
+                                <title lang="fr">Image dans la grille</title>
+                            </meta>
+                        </property>
+                        <property name="text" type="text_line" mandatory="true">
+                            <meta>
+                                <title lang="en">Title</title>
+                                <title lang="fr">Titre</title>
+                            </meta>
+                        </property>
+                        <property name="large" type="single_media_selection" mandatory="true">
+                            <meta>
+                                <title lang="en">Large Image</title>
+                                <title lang="fr">Image taille réelle</title>
+                            </meta>
+                        </property>
+                    </properties>
+                </type>
+            </types>
+        </block>
+    </properties>
+
+    <areas>
+        <area key="snippet_gallery">
+            <meta>
+                <title lang="en">Gallery</title>
+                <title lang="fr">Galerie</title>
+            </meta>
+        </area>
+    </areas>
+</template>

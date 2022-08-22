@@ -1,0 +1,13 @@
+.gallery {
+    &__description {
+        & > p {
+            color: #052514;
+        }
+    }
+
+    &__item {
+        & > img {
+            cursor: pointer;
+        }
+    }
+}

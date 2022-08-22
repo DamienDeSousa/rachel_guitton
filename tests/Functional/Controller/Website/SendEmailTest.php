@@ -10,6 +10,8 @@ class SendEmailTest extends PantherTestCase
     {
         $client = self::createPantherClient();
         $crawler = $client->request('GET', '/');
+        //fix bug that avoid panther to scroll
+        $client->executeScript('document.documentElement.style.scrollBehavior = "auto";');
         //wait ajax call
         sleep(1);
         $form = $crawler->filter('#send_email')->form([
