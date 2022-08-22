@@ -1,0 +1,11 @@
+.services {
+    $primary-color: #82CA9C;
+    &__item {
+        & > img {
+            border: 0.20rem solid $primary-color;
+        }
+        & > h6 {
+            color: $primary-color;
+        }
+    }
+}

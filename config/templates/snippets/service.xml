@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>service</key>
+
+    <meta>
+        <title lang="en">Service</title>
+        <title lang="fr">Service</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="fr">Titre</title>
+            </meta>
+        </property>
+
+        <block name="services" minOccurs="1">
+            <meta>
+                <title lang="en">Services</title>
+                <title lang="fr">Services</title>
+            </meta>
+            <types>
+                <type name="service">
+                    <properties>
+                        <property name="image" type="single_media_selection" mandatory="true">
+                            <meta>
+                                <title lang="en">Image</title>
+                                <title lang="fr">Image</title>
+                            </meta>
+                        </property>
+                        <property name="title" type="text_line" mandatory="true">
+                            <meta>
+                                <title lang="en">Title</title>
+                                <title lang="fr">Titre</title>
+                            </meta>
+                        </property>
+                    </properties>
+                </type>
+            </types>
+        </block>
+    </properties>
+
+    <areas>
+        <area key="snippet_service">
+            <meta>
+                <title lang="en">Service</title>
+                <title lang="fr">Service</title>
+            </meta>
+        </area>
+    </areas>
+</template>

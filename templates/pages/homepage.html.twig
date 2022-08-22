@@ -20,11 +20,7 @@
         <div class="col headband p-6"></div>
     </div>
 
-    <div class="row" id="service">
-        <div class="col border border-danger">
-            <h4>SERVICE</h4>
-        </div>
-    </div>
+    {% include 'snippets/service.html.twig' with {'snippet': sulu_snippet_load_by_area('snippet_service')} %}
 
     {% include 'snippets/contact.html.twig' with {'snippet': sulu_snippet_load_by_area('snippet_contact')} %}
 
