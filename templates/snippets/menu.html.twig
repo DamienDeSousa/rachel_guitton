@@ -8,7 +8,7 @@
             <div class="container">
                 <ul class="navbar-nav mx-md-auto">
                     {% for link in links %}
-                        <li class="nav-item {{ loop.first ? 'nav__item--active' : 'nav__item' }}">
+                        <li class="nav-item {{ loop.first ? 'menu__item--active' : 'menu__item' }}">
                             <a class="nav-link" href="#{{ link.anchor }}"><h4>{{ link.link_name }}</h4></a>
                         </li>
                     {% endfor %}

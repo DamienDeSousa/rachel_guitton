@@ -1,11 +1,11 @@
 .menu {
     background-color: #C6C4C5;
 
-    .nav__item--active a {
+    &__item--active a {
         color: #302E2F;
     }
 
-    .nav__item a {
+    &__item a {
         color: white;
     }
 

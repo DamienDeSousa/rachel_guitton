@@ -1,27 +1,37 @@
 .contact {
     background-color: #1E755E;
-    $color: #B6BCBF;
-    $border: none;
-    $backgroundColor: transparent;
+    $color-primary: #B6BCBF;
+    $border-primary: none;
+    $backgroundColor-primary: transparent;
     $outline: none;
 
-    &__text {
-        color: $color;
-    }
-
-    &__submit,&__input {
+    @mixin element-rendering(
+        $color: $color-primary,
+        $border: $border-primary,
+        $backgroundColor: $backgroundColor-primary
+    ) {
         color: $color;
         border: $border;
         background-color: $backgroundColor;
     }
 
+    &__text {
+        color: $color-primary;
+    }
+
+    &__submit {
+        @include element-rendering;
+    }
+
     &__input {
+        @include element-rendering;
+
         &::placeholder {
-            color: $color;
+            color: $color-primary;
         }
 
         &:focus,&:active,&:hover {
-            background-color: $backgroundColor;
+            background-color: $backgroundColor-primary;
             outline: $outline;
         }
     }
