@@ -1,3 +1,9 @@
+import HeaderBanner from '../components/HeaderBanner'
+
 export default function Home() {
-  return <>Start doing some shit</>
+  return (
+    <>
+      <HeaderBanner />
+    </>
+  )
 }
