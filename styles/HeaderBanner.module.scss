@@ -1,0 +1,10 @@
+@import './variables.module.scss';
+
+.headerbanner {
+  display: flex;
+  justify-content: center;
+
+  & > h1 {
+    color: $header-banner-text-color;
+  }
+}
