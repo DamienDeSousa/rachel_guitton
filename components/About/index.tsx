@@ -4,10 +4,10 @@ import styles from '../../styles/About.module.scss'
 
 export default function About() {
   const paragraphs = [
-    "Infographiste designer trans-média titulaire d'une licence d'art plastique spécialisé dans la photographie et" +
-      "l'édition, un master 1 en pratique de l'accrochage (scénographie) et titulaire d'une licence en conception" +
+    "Infographiste designer trans-média titulaire d'une licence d'art plastique spécialisé dans la photographie et " +
+      "l'édition, un master 1 en pratique de l'accrochage (scénographie) et titulaire d'une licence en conception " +
       'audiovisuel et nouveau média.',
-    'Je saurais, vous accompagnez dans des projets qui mixent différents supports, du plastique au numérique en' +
+    'Je saurais, vous accompagnez dans des projets qui mixent différents supports, du plastique au numérique en ' +
       'passant par la réalité mixte. Du physique au virtuel.',
   ]
   return (

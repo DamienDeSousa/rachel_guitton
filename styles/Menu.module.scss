@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  &__items {
+    padding: 30px 0 20px 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #c6c4c5;
+  }
+
+  &__item {
+    margin: 0px;
+    padding: 10px 0 10px 0;
+    color: #e8e6e7;
+
+    &--active {
+      color: #302e2f;
+    }
+  }
+}
+
+.menubanner {
+  height: 50px;
+  width: 100vw;
+  background-color: #949494;
+  max-width: 100%;
+}
