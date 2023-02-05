@@ -11,7 +11,9 @@ export default function Menu() {
         <a href="#about" style={{ textDecoration: 'unset' }}>
           <h2 className={styles.menu__item}>A PROPOS</h2>
         </a>
-        <h2 className={styles.menu__item}>SERVICES</h2>
+        <a href="#services" style={{ textDecoration: 'unset' }}>
+          <h2 className={styles.menu__item}>SERVICES</h2>
+        </a>
         <h2 className={styles.menu__item}>TÉMOIGNAGES</h2>
         <h2 className={styles.menu__item}>PORTFOLIO</h2>
         <h2 className={styles.menu__item}>CONTACTS</h2>
