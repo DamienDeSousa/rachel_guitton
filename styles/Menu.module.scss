@@ -1,3 +1,5 @@
+@import './variables.module.scss';
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -6,16 +8,16 @@
     padding: 30px 0 20px 10px;
     display: flex;
     flex-direction: column;
-    background-color: #c6c4c5;
+    background-color: $menu-items-background-color;
   }
 
   &__item {
     margin: 0px;
     padding: 10px 0 10px 0;
-    color: #e8e6e7;
+    color: $menu-item-text-color;
 
     &--active {
-      color: #302e2f;
+      color: $menu-item-text-color-active;
     }
   }
 }
@@ -23,6 +25,6 @@
 .menubanner {
   height: 50px;
   width: 100vw;
-  background-color: #949494;
+  background-color: $menu-banner-background-color;
   max-width: 100%;
 }
