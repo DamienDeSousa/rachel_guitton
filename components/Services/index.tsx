@@ -1,46 +1,37 @@
 import styles from '../../styles/Services.module.scss'
-import numericIdentity from '../../public/images/services/identité_numerique_identitédemarque.png'
-import shootingPhoto from '../../public/images/services/shooting_photo_video.png'
-import videoSupport from '../../public/images/services/montage_video_derush_son&co.png'
-import graphicalCharter from '../../public/images/services/charte_graphique_cahierdescharges_auditclient.png'
-import interactivity from '../../public/images/services/interactivité_RA_VR.png'
-import model from '../../public/images/services/maquette_toutsupport.png'
-import designCreation from '../../public/images/services/creation_design_logo_typo&co.png'
-import presentation from '../../public/images/services/presentation_produit_multisupport_mockup.png'
-import Image from 'next/image'
 
 export default function Services() {
   const services = [
     {
-      file: numericIdentity,
+      title: 'Identité Numérique',
       text: 'Accompagnement création de votre identité en ligne',
     },
     {
-      file: shootingPhoto,
+      title: 'Shooting Photo',
       text: 'Prise de vue de vos produits',
     },
     {
-      file: videoSupport,
+      title: 'Montage Vidéo',
       text: 'Réalisation sous le support vidéo',
     },
     {
-      file: graphicalCharter,
+      title: 'Charte Graphique',
       text: 'Accompagnement dans la cohérence de votre visuel',
     },
     {
-      file: model,
+      title: 'Maquette',
       text: 'Accompagnement dans la création graphique sur tout support',
     },
     {
-      file: interactivity,
+      title: 'Intéractivité',
       text: 'Accompagnement dans un projet interactif RA ou VR',
     },
     {
-      file: designCreation,
+      title: 'Création Design',
       text: 'Accompagnement création graphique (logo, typographie...)',
     },
     {
-      file: presentation,
+      title: 'Présentation',
       text: 'Présentation d’un produit sur support digital',
     },
   ]
@@ -51,7 +42,9 @@ export default function Services() {
       <div className={styles.services__list}>
         {services.map((service, index) => (
           <div key={index} className={styles.services__item}>
-            <Image src={service.file} alt={service.text} width={150} height={150} />
+            <div className={styles.services__item}>
+              <h3>{service.title}</h3>
+            </div>
             <p>{service.text}</p>
           </div>
         ))}
